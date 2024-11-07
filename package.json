@@ -1,0 +1,27 @@
+{
+  "name": "ak-generate-template",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/AlKudryavtsev/ak-generate-template.git",
+  "author": "Alexey Kudryavtsev <alexey.php@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/nunjucks": "^3.2.6",
+    "prettier": "^3.3.3",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "build": "tsup",
+    "publish": "npm publish"
+  }
+}
