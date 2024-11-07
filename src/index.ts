@@ -1,5 +1,6 @@
 import {existsSync} from 'fs'
 import {renderString} from 'nunjucks'
+import * as fs from 'node:fs';
 export class RenderTemplate {
 
     constructor(protected src: string, protected ext = ".twig") {
@@ -17,6 +18,12 @@ export class RenderTemplate {
             return "";
         }
 
+    }
+
+    style() {
+        const src = (this.src + "/" + 'style.css').replaceAll('//','/');
+        if (! existsSync(src)) return "";
+        return `<style>${fs.readFileSync(src).toString()}</style>`;
     }
 
 
